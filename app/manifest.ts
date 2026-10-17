@@ -1,0 +1,1 @@
+export default function manifest(){return {name:'LEXON AI',short_name:'LEXON AI',description:'Learn AI, explore tools and build with the Lexon ecosystem.',start_url:'/',display:'standalone' as const,background_color:'#F9F9F7',theme_color:'#111111',icons:[{src:'/icon.svg',sizes:'any',type:'image/svg+xml',purpose:'any'}]}}

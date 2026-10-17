@@ -1,0 +1,18 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{background:#F9F9F7;color:#111;font-family:var(--f-body),Lora,Georgia,serif;line-height:1.6}
+:focus-visible{outline:2px solid #111;outline-offset:2px}
+h1,h2,h3{font-family:var(--f-head),'Playfair Display',Georgia,serif;letter-spacing:-.02em;line-height:1.05}
+@layer components{
+.btn{@apply inline-flex items-center justify-center min-h-[44px] px-[22px] border border-ink bg-ink text-paper font-ui font-semibold text-[13px] uppercase tracking-[.08em] transition duration-200 cursor-pointer}
+.btn:hover,.card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 #111}
+.btn-red{@apply bg-red border-red text-white}.btn-ghost{@apply bg-transparent text-ink}
+.card{@apply border border-ink bg-paper p-6 transition duration-200 block}
+.lbl{@apply block font-ui text-xs font-semibold uppercase tracking-wider mt-4 mb-1}
+.inp{@apply w-full border border-ink bg-paper p-2 min-h-[44px]}
+.mono{@apply font-mono text-xs text-neutral-600}
+.sh{@apply flex justify-between items-end border-b-4 border-ink pb-2 mb-6}}
+.ticker{position:relative;overflow:hidden;flex:1;height:26px}
+.ticker span{position:absolute;top:0;left:0;white-space:nowrap;line-height:26px;animation:tick 26s linear infinite}
+@keyframes tick{from{transform:translateX(-100%)}to{transform:translateX(100vw)}}
+@media (prefers-reduced-motion:reduce){.ticker span{animation:none;position:static}}
+.paper{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .25 0 0 0 .08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}

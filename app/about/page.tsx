@@ -1,0 +1,3 @@
+export const metadata={title:'About'}
+export default function About(){return <main className="w-full max-w-[1400px] mx-auto px-5 lg:px-[5vw] py-10"><h1 className="text-6xl font-black">What is Lexon AI?</h1><p className="my-5 max-w-xl">Lexon AI is an AI-focused learning and technology platform designed to help people learn, explore and build with AI.</p>
+<div className="grid md:grid-cols-3 border border-ink">{[['Mission','Make AI learning practical and accessible.'],['Lexon AI Website','Courses, tools, notices and the ecosystem.'],['Lexon AI App','A separate free learning application.']].map(([t,d])=><div key={t} className="p-5 border-b md:border-b-0 md:border-r last:border-0 border-ink"><h3 className="text-xl">{t}</h3><p>{d}</p></div>)}</div></main>}
